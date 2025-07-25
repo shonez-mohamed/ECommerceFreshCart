@@ -1,0 +1,27 @@
+@if(detailsProduct){
+   <section>
+    <h1 class="text-center my-2 text-green-600">Details Product</h1>
+    <div class="flex align-middle">
+       <div class="w-1/4">
+          <div>
+            <img [src]="detailsProduct.imageCover" class="w-full" [alt]="detailsProduct.title">
+          </div>
+       </div>   
+       <div class="w-3/4">
+         <div>
+            <h2>{{detailsProduct.title}}</h2>
+            <p class="text-muted">{{detailsProduct.description}}</p>
+            <h3>{{detailsProduct.category.name}}</h3>
+            <div class="flex justify-between items-center">
+                   <span>{{detailsProduct.price}} EGP</span>
+                   <div class="flex items-center">
+                      <i class="fas fa-star text-yellow-300"></i>
+                      <span class="text-gray-500">{{detailsProduct.ratingsAverage}}</span>
+                   </div>
+            </div>
+            <button class="bg-green-600 text-white py-2 px-10 border rounded w-[90%] mx-auto block"> + Add To Cart</button>
+         </div>
+       </div>   
+    </div>
+   </section>
+}

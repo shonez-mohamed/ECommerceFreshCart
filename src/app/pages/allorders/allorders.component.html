@@ -1,0 +1,18 @@
+<section>
+    <h1>All Order</h1>
+    @for (order of CartItems ; track order._id) {
+    @for(prod of order.cartItems; track $index){
+      <div class="grid md:grid-cols-[10%_minmax(0,1fr)] border-b mb-2">
+        <div>
+            <img [src]="prod.product.imageCover" class="w-full h-[100px] object-contain" [alt]="prod.product.title">
+        </div>
+        <div class=" flex justify-between items-center">
+            <div>
+                <h3>{{prod.product.title}}</h3>
+                <h4>Price : {{prod.price| currency:'GBP'}}</h4>
+            </div>
+        </div>
+    </div>
+    }
+    }
+</section>

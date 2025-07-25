@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+
+@import 'ngx-toastr/toastr';
+
+.btn-main{
+    @apply disabled:bg-gray-700 bg-green-600 text-white px-12 py-2 border rounded hover:bg-green-900 transition-colors duration-500
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+.main-sec {
+    @apply bg-gray-50 rounded border shadow p-4;
+}
