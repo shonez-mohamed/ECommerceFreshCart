@@ -16,7 +16,7 @@ export class AuthService {
    userData:any = null;
 
   sendRegisterForm(data:object):Observable<any>{
-    return this.httpClient.post(`${environment.baseUrl}/api/v1/auth/signup` , data)
+    return this.httpClient.post(`${environment.baseUrl}/api/v1/auth/signup`, data)
   }
 
   sendLoginForm(data:object):Observable<any>{

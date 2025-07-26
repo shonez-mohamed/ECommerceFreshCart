@@ -25,7 +25,7 @@ export class RegisterComponent {
            email: [null  , [Validators.required , Validators.email]],
            password: [null , [Validators.required , Validators.pattern(/^[A-Z][a-zA-Z0-9]{6,20}$/)]],
            rePassword: [null , [Validators.required , Validators.pattern(/^[A-Z][a-zA-Z0-9]{6,20}$/)]],
-           phone: [null  , [Validators.required , Validators.pattern(/^(01)[0125][0-9]{8}$/)]],
+           phone: [null  , [Validators.required , Validators.pattern(/^01[0125][0-9]{8}$/)]],
      }, { validators : this.confirmPassword } )
    submitForm():void {
      if(this.registerForm.valid){
