@@ -23,8 +23,8 @@ export class RegisterComponent {
      registerForm: FormGroup = this.formBuilder.group({
            name: [null , [Validators.required , Validators.minLength(3) , Validators.maxLength(20)]],
            email: [null  , [Validators.required , Validators.email]],
-           password: [null , [Validators.required , Validators.pattern(/^[A-Z][a-zA-Z0-9]{6,20}$/)]],
-           rePassword: [null , [Validators.required , Validators.pattern(/^[A-Z][a-zA-Z0-9]{6,20}$/)]],
+           password: [null , [Validators.required , Validators.pattern(/^[A-Z]\w{7,}$/)]],
+           rePassword: [null , [Validators.required ]],
            phone: [null  , [Validators.required , Validators.pattern(/^01[0125][0-9]{8}$/)]],
      }, { validators : this.confirmPassword } )
    submitForm():void {
@@ -35,7 +35,9 @@ export class RegisterComponent {
             console.log(res);
             if(res.message === 'success'){  
                 this.msgSuccess =  res.message ;
+               setTimeout(() => {
                   this.router.navigate(['/login']); 
+               }, 500);
             }
             this.isLoading = false;
          },

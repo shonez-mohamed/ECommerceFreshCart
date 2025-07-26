@@ -20,7 +20,7 @@ export class AuthService {
   }
 
   sendLoginForm(data:object):Observable<any>{
-    return this.httpClient.post(`${environment.baseUrl}/api/v1/auth/signin` , data)
+    return this.httpClient.post(`${environment.baseUrl}/api/v1/auth/signin`, data)
   }
 
    saveUserData():void {
